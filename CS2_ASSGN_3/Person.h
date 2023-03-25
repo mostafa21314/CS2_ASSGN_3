@@ -12,14 +12,15 @@ private:
 	string name;
 	string id;
 	int age;
+public:
 	Person();
-	void SetID(string);
-	void SetName(string);
-	void SetAge(int);
-	int GetAge();
-	string GetName();
-	string GetID();
-	virtual void PrintInfo();
+	void SetID(string);//function to set the ID
+	void SetName(string);//function to set the name
+	void SetAge(int);//function ot set the age
+	int GetAge() const;//function to return the age
+	string GetName() const;//function to return the name
+	string GetID() const;//function to return the id
+	virtual void PrintInfo() const = 0;//this will be the pure virtual function
 };
 #endif
 
