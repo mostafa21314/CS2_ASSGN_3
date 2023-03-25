@@ -41,7 +41,7 @@ void Mechanic::SetApp(Appointment temp)
 	}
 	else
 		if (counter != 24)
-			this->apps[counter++] = temp;
+			this->apps[counter++]=temp;
 		else
 			cout << "The mechanic is fully booked" << endl;
 
