@@ -72,3 +72,14 @@ void Queue<T>::push(T temp)
 	else
 		cout << "The array full" << endl;
 }
+template<class T>
+int Queue<T>::GetCount() const
+{
+	return this->count;
+}
+template<class T>
+int Queue<T>::GetSize() const
+{
+	return this->size;
+}
+
