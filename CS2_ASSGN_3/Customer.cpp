@@ -26,11 +26,11 @@ void Customer::PrintInfo() const
 	cout << "Customer Age is " << this->GetAge() << endl;
 	cout << "Customer ID is " << this->GetID() << endl;
 	if (this->GetApp().hours == -1)
-		cout << "No Mechanic was Available at the time chosen " << endl;
+		cout << "No Mechanic was Available at the time chosen " << endl<<endl;
 	else
 	{
 		cout << "Customer has an Appointment at " << this->GetApp().hours << ":" << this->GetApp().min <<endl;
-		cout << "The Mechanic Assigned to this customer has ID " << this->GetMID() << endl;
+		cout << "The Mechanic Assigned to this customer has ID " << this->GetMID() << endl<<endl;
 	}
 }
 void Customer::SetMID(string id)

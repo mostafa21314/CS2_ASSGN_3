@@ -3,6 +3,8 @@
 #include"Mechanic.h"
 #include"Person.h"
 #include"Queue.h"
+#include<iostream>
+using namespace std;
 int main()
 {
 	const int Mnum = 3;
@@ -53,7 +55,7 @@ int main()
 		}
 	}
 	Queue<Customer> line(Cnum);
-	/*for (int x = 0; x < Cnum; x++)
+	for (int x = 0; x < Cnum; x++)
 	{
 			for (int j = x + 1; j < Cnum; j++)
 			{
@@ -64,12 +66,12 @@ int main()
 					money[x] = temp;
 				}
 			}
-			customers.push(money[x]);
-	}*/
+			line.push(money[x]);
+	}
 
-	/*for (int i = 0; i < Cnum; i++)
+	for (int i = 0; i < Cnum; i++)
 	{
-		customers.pop().PrintInfo();
-	}*/
+		line.pop().PrintInfo();
+	}
 	return 0;
 }
