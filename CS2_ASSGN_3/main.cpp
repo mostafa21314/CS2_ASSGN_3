@@ -52,9 +52,24 @@ int main()
 			}
 		}
 	}
-	for (int i = 0; i < Cnum; i++)
+	Queue<Customer> line(Cnum);
+	/*for (int x = 0; x < Cnum; x++)
 	{
-		money[i].PrintInfo();
-	}
+			for (int j = x + 1; j < Cnum; j++)
+			{
+				if (money[j] < money[x])
+				{
+					Customer temp = money[j];
+					money[j] = money[x];
+					money[x] = temp;
+				}
+			}
+			customers.push(money[x]);
+	}*/
+
+	/*for (int i = 0; i < Cnum; i++)
+	{
+		customers.pop().PrintInfo();
+	}*/
 	return 0;
 }
