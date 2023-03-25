@@ -71,7 +71,8 @@ int main()
 
 	for (int i = 0; i < Cnum; i++)
 	{
-		line.pop().PrintInfo();
+		Customer test = line.pop();
+		cout << "Mr " << test.GetName() << " Has an Appointment at " << test.GetApp().hours << ":" << test.GetApp().min << " with mechanic whos ID is " << test.GetMID() << endl;
 	}
 	return 0;
 }

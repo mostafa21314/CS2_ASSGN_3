@@ -57,7 +57,7 @@ public:
 			this->arr[0] = temp;
 			this->count++;
 		}
-		if (!this->isFull())
+		else if (!this->isFull())
 		{
 			this->arr[++rear % this->GetSize()] = temp;
 			this->rear %= this->GetSize();
