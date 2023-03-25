@@ -5,8 +5,10 @@
 #include"Queue.h"
 int main()
 {
-	Mechanic workers[3];
-	for (int i = 0; i < 3; i++)
+	const int Mnum = 3;
+	const int Cnum = 5;
+	Mechanic workers[Mnum];
+	for (int i = 0; i < Mnum; i++)
 	{
 		int num;
 		string name, ID;
@@ -14,8 +16,8 @@ int main()
 		cin >> name >> num >> ID;
 		workers[i].Mechanic::Mechanic(name,ID,num);
 	}
-	Customer money[10];
-	for (int i = 0; i < 10; i++)
+	Customer money[Cnum];
+	for (int i = 0; i < Cnum; i++)
 	{
 		int num,h,m;
 		string name, ID;
@@ -24,15 +26,15 @@ int main()
 		cin >> name >> num >> ID>>h>>m;
 		Appointment temp(h, m);
 		money[i].Customer::Customer(name, ID, num,"",temp);
-		for (int y = i%3; y >0; y++)
+		for (int y = i%Mnum; y >0; y++)
 		{
 			int x;
-			for (x = 0; x < 3; x++)
+			for (x = 0; x < Mnum; x++)
 			{
 				if (workers[x].IsAvailable(temp))
 					break;
 			}
-			if (x == 3)
+			if (x == Mnum)
 				break;
 			if (workers[y].IsAvailable(temp))
 			{
@@ -48,7 +50,7 @@ int main()
 			money[i].SetApp(non);
 		}
 	}
-	for (int i = 0; i < 2; i++)
+	for (int i = 0; i < Cnum; i++)
 	{
 		money[i].PrintInfo();
 	}
