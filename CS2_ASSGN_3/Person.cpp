@@ -1,6 +1,3 @@
-#include<iostream>
-#include<string>
-using namespace std;
 #include "Person.h"
 Person::Person() {
 	SetAge(0);
