@@ -9,5 +9,10 @@ using namespace std;
 struct Appointment {
 	int min;
 	int hours;
+	Appointment(int x, int y)
+	{
+		hours = x;
+		min = y;
+	}
 };
 #endif

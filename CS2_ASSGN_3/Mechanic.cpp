@@ -1,4 +1,16 @@
 #include "Mechanic.h"
+Mechanic::Mechanic(string n, string i, int a)
+{
+	this->Person::Person(n,i,a);
+	this->SetCount(0);
+	this->apps = new Appointment[24];
+}
+Mechanic::Mechanic()
+{
+	this->SetCount(0);
+	this->apps = new Appointment[24];
+	this->Person::Person();
+}
 Appointment Mechanic::GetApp(int x) const
 {
 	return this->apps[x];
@@ -21,7 +33,6 @@ void Mechanic::SetApp(Appointment temp)
 	if (counter == 0)
 	{
 		this->counter = 1;
-		this->apps = new Appointment[24];
 		apps[0] = temp;
 	}
 	else

@@ -14,6 +14,7 @@ private:
 	int age;
 public:
 	Person();
+	Person(string, string, int);
 	void SetID(string);//function to set the ID
 	void SetName(string);//function to set the name
 	void SetAge(int);//function ot set the age

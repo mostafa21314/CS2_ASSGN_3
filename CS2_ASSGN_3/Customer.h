@@ -14,6 +14,8 @@ private:
 	string MechanicID;
 	Appointment app;
 public:
+	Customer();
+	Customer(string, string, int, string, Appointment);
 	virtual void PrintInfo() const;
 	void SetMID(string);
 	void SetApp(Appointment);

@@ -8,9 +8,11 @@ using namespace std;
 class Mechanic : public Person
 {
 private:
-	int counter=0;
+	int counter;
 	Appointment* apps;
 public:
+	Mechanic();
+	Mechanic(string, string, int);
 	void PrintInfo() const;
 	bool IsAvailable(Appointment) const;
 	int GetCounter() const;

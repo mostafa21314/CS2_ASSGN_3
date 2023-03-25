@@ -4,6 +4,11 @@ Person::Person() {
 	SetName("");
 	SetID("");
 }
+Person::Person(string s,string i,int x) {
+	SetAge(x);
+	SetName(s);
+	SetID(i);
+}
 void Person::SetID(string s)
 {
 	this->id = s;

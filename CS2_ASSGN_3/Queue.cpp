@@ -1,4 +1,6 @@
 #include "Queue.h"
+#include<iostream>
+using namespace std;
 template<class T>
 Queue<T>::Queue()
 {
@@ -42,9 +44,11 @@ template<class T>
 T Queue<T>::pop()
 {
 	if (!this->isEmpty())
+	{
 		return this->arr[front++];
-	this->front %= this->GetSize();
-	this->count--;
+		this->front %= this->GetSize();
+		this->count--;
+	}
 	else
 		cout << "The queue is empty" << endl;
 	return 0;
@@ -57,7 +61,7 @@ void Queue<T>::push(T temp)
 		this->front = 0;
 		this->rear = 0;
 		this->arr[0] = temp;
-		thhis->count++;
+		this->count++;
 	}
 	if (!this->isFull())
 	{

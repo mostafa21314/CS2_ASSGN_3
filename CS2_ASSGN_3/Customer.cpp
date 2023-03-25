@@ -2,6 +2,19 @@
 #include<string>
 using namespace std;
 #include "Customer.h"
+Customer::Customer()
+{
+	this->Person::Person();
+	this->MechanicID = "";
+	this->app.hours = 0;
+	this->app.min = 0;
+}
+Customer::Customer(string nam,string id, int ag, string mid, Appointment temp)
+{
+	this->Person::Person(nam,id,ag);
+	this->MechanicID = mid;
+	this->app = temp;
+}
 void Customer::PrintInfo() const
 {
 	cout << "Customer Name is " << this->GetName() << endl;
