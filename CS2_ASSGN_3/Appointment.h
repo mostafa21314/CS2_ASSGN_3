@@ -14,5 +14,10 @@ struct Appointment {
 		hours = x;
 		min = y;
 	}
+	Appointment()
+	{
+		hours = -1;
+		min = -1;
+	}
 };
 #endif

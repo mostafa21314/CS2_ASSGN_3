@@ -6,8 +6,8 @@ Customer::Customer()
 {
 	this->Person::Person();
 	this->MechanicID = "";
-	this->app.hours = 0;
-	this->app.min = 0;
+	this->app.hours = -1;
+	this->app.min = -1;
 }
 Customer::Customer(string nam,string id, int ag, string mid, Appointment temp)
 {
@@ -20,8 +20,13 @@ void Customer::PrintInfo() const
 	cout << "Customer Name is " << this->GetName() << endl;
 	cout << "Customer Age is " << this->GetAge() << endl;
 	cout << "Customer ID is " << this->GetID() << endl;
-	cout << "Customer has an Appointment at " << this->GetApp().hours << ":" << this->GetApp().min << endl;
-	cout << "The Mechanic Assigned to this customer has ID " << this->GetMID() << endl;
+	if (this->GetApp().hours == -1)
+		cout << "No Mechanic was Available at the time chosen " << endl;
+	else
+	{
+		cout << "Customer has an Appointment at " << this->GetApp().hours << ":" << this->GetApp().min <<endl;
+		cout << "The Mechanic Assigned to this customer has ID " << this->GetMID() << endl;
+	}
 }
 void Customer::SetMID(string id)
 {

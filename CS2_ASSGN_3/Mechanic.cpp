@@ -21,6 +21,8 @@ int Mechanic::GetCounter() const
 }
 bool Mechanic::IsAvailable(Appointment test) const
 {
+	if (this->GetCounter() == 24)
+		return 0;
 	for (int i = 0; i < this->GetCounter(); i++)
 	{
 		if ((test.hours == this->GetApp(i).hours) && (test.min == this->GetApp(i).min))
