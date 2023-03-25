@@ -1,1 +1,70 @@
 #include "Queue.h"
+template<class T>
+Queue<T>::Queue()
+{
+	this->front = -1;
+	this->rear = -1;
+	this->count = 0;
+	this->size = 10;
+	this->arr = new T[size];
+}
+template<class T>
+Queue<T>::Queue(int x)
+{
+	this->front = -1;
+	this->rear = -1;
+	this->count = 0;
+	this->size = x;
+	this->arr = new T[size];
+}
+template<class T>
+Queue<T>::~Queue()
+{
+	delete[]this->arr;
+}
+template<class T>
+bool Queue<T>::isEmpty() const
+{
+	if (this->GetCount() == 0)
+		return 1;
+	else
+		return 0;
+}
+template<class T>
+bool Queue<T>::isFull() const
+{
+	if (this->GetCount() == (this->GetSize() - 1))
+		return 1;
+	else
+		return 0;
+}
+template<class T>
+T Queue<T>::pop()
+{
+	if (!this->isEmpty())
+		return this->arr[front++];
+	this->front %= this->GetSize();
+	this->count--;
+	else
+		cout << "The queue is empty" << endl;
+	return 0;
+}
+template<class T>
+void Queue<T>::push(T temp)
+{
+	if (this->isEmpty())
+	{
+		this->front = 0;
+		this->rear = 0;
+		this->arr[0] = temp;
+		thhis->count++;
+	}
+	if (!this->isFull())
+	{
+		this->arr[++rear%this->GetSize] = temp;
+		this->rear %= this->GetSize();
+		count++;
+	}
+	else
+		cout << "The array full" << endl;
+}
