@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 #include "Customer.h"
-void Customer::Printinfo() const
+void Customer::PrintInfo() const
 {
 	cout << "Customer Name is " << this->GetName() << endl;
 	cout << "Customer Age is " << this->GetAge() << endl;
@@ -26,15 +26,36 @@ Appointment Customer::GetApp() const
 {
 	return this->app;
 }
-bool operator<(Customer compare) const
+bool Customer::operator<(Customer compare) const
 {
-
+	if (this->GetApp().hours < compare.GetApp().hours)
+	{
+		return true;
+	}
+	else if (this->GetApp().hours > compare.GetApp().hours)
+	{
+		return false;
+	}
+	else if (this->GetApp().min >= compare.GetApp().min)
+	{
+		return false;
+	}
+	else if (this->GetApp().min < compare.GetApp().min)
+	{
+		return true;
+	}
 }
-bool operator>(Customer compare) const
+bool Customer::operator>(Customer compare) const
 {
-
+	if ((*this < compare) || ((this->GetApp().hours == compare.GetApp().hours) && (this->GetApp().min == compare.GetApp().min)))
+		return false;
+	else
+		return true;
 }
-bool operator==(Customer compare) const
+bool Customer::operator==(Customer compare) const//customer
 {
-
+	if ((this->GetApp().hours == compare.GetApp().hours) && (this->GetApp().min == compare.GetApp().min))
+		return true;
+	else
+		return false;
 }

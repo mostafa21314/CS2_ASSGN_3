@@ -14,7 +14,7 @@ private:
 	string MechanicID;
 	Appointment app;
 public:
-	virtual void PrintInfo() const override;
+	virtual void PrintInfo() const;
 	void SetMID(string);
 	void SetApp(Appointment);
 	string GetMID() const;
