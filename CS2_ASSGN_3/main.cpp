@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 	const int Mnum = 3;//number of mechanics in the workshop
-	const int Cnum = 4;//number of customers in the workshop
+	const int Cnum = 8;//number of customers in the workshop
 	Mechanic workers[Mnum];
 	workers[0].Mechanic::Mechanic("Ayman", "15", 19);
 	workers[1].Mechanic::Mechanic("Khaled", "16", 20);
@@ -78,7 +78,7 @@ int main()
 			if (test.GetMID() == workers[i].GetID())
 				Mechname = workers[i].GetName();
 		}
-		if (Mechname == "")
+		if (Mechname == "")//if no mechanic was assigned to the customer
 			cout << "Mr " << test.GetName() << " Appointment was cancelled because no mechanic was available " << endl;
 		else
 		cout << "Mr " << test.GetName() << " Has an Appointment at " << test.GetApp().hours << ":" << test.GetApp().min << " with Mr " <<Mechname << endl;

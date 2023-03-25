@@ -23,23 +23,25 @@ bool Mechanic::IsAvailable(Appointment test) const
 {
 	if (this->GetCounter() == 24)
 		return 0;
-	for (int i = 0; i < this->GetCounter(); i++)
+	else
+	{	for (int i = 0; i < this->GetCounter(); i++)
 	{
 		if ((test.hours == this->GetApp(i).hours) && (test.min == this->GetApp(i).min))
 			return 0;
 	}
 	return 1;
+	}
 }
 void Mechanic::SetApp(Appointment temp)
 {
 	if (counter == 0)
 	{
-		this->counter = 1;
+		this->SetCount(1);
 		apps[0] = temp;
 	}
 	else
 		if (counter != 24)
-			this->apps[counter++];
+			this->apps[counter++] = temp;
 		else
 			cout << "The mechanic is fully booked" << endl;
 
