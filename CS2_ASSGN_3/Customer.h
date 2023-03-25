@@ -19,9 +19,9 @@ public:
 	void SetApp(Appointment);
 	string GetMID() const;
 	Appointment GetApp() const;
-	bool operator<(Customer) const;
-	bool operator>(Customer) const;
-	bool operator==(Customer) const;
+	bool operator<(const Customer&) const;
+	bool operator>(const Customer&) const;
+	bool operator==(const Customer&) const;
 
 };
 #endif;

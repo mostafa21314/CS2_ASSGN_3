@@ -26,7 +26,7 @@ Appointment Customer::GetApp() const
 {
 	return this->app;
 }
-bool Customer::operator<(Customer compare) const
+bool Customer::operator<(const Customer &compare) const
 {
 	if (this->GetApp().hours < compare.GetApp().hours)
 	{
@@ -45,14 +45,14 @@ bool Customer::operator<(Customer compare) const
 		return true;
 	}
 }
-bool Customer::operator>(Customer compare) const
+bool Customer::operator>(const Customer &compare) const
 {
 	if ((*this < compare) || ((this->GetApp().hours == compare.GetApp().hours) && (this->GetApp().min == compare.GetApp().min)))
 		return false;
 	else
 		return true;
 }
-bool Customer::operator==(Customer compare) const//customer
+bool Customer::operator==(const Customer &compare) const
 {
 	if ((this->GetApp().hours == compare.GetApp().hours) && (this->GetApp().min == compare.GetApp().min))
 		return true;
