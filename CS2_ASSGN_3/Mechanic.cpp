@@ -48,7 +48,7 @@ void Mechanic::SetCount(int x)
 {
 	counter = x;
 }
-void Mechanic::PrintInfo() const
+void Mechanic::PrintInfo() const//prints all the appointments the mechanic have and their times
 {
 	cout << "Mechanic Name is " << this->GetName() << endl;
 	cout << "Mechanic Age is " << this->GetAge() << endl;

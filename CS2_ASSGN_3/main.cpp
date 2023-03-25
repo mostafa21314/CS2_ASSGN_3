@@ -8,11 +8,11 @@ using namespace std;
 int main()
 {
 	const int Mnum = 3;//number of mechanics in the workshop
-	const int Cnum = 5;//number of customers in the workshop
+	const int Cnum = 4;//number of customers in the workshop
 	Mechanic workers[Mnum];
-	workers[0].Mechanic::Mechanic("Mostafa", "15", 19);
-	workers[1].Mechanic::Mechanic("Ahmed", "16", 20);
-	workers[2].Mechanic::Mechanic("Mahmoud", "17", 18);
+	workers[0].Mechanic::Mechanic("Ayman", "15", 19);
+	workers[1].Mechanic::Mechanic("Khaled", "16", 20);
+	workers[2].Mechanic::Mechanic("Mai", "17", 18);
 	/*for (int i = 0; i < Mnum; i++)//loop for the user to enter the data of the mechanic, a similar loop can be implemented for customers
 	{
 		int num;
