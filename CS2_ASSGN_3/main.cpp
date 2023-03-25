@@ -14,6 +14,16 @@ int main()
 		cin >> name >> num >> ID;
 		workers[i].Mechanic::Mechanic(name,ID,num);
 	}
+	Customer money[10];
+	for (int i = 0; i < 10; i++)
+	{
+		int num,h,m;
+		string name, ID;
+		cout << "Please enter the customer information such as name age id appointment time(hours min):  ";
+		cin >> name >> num >> ID>>h>>m;
+		Appointment temp(h, m);
+		money[i].Customer::Customer(name, ID, num,"000",temp);
+	}
 	/*workers[0].Mechanic::Mechanic("Mostafa", "15", 19);
 	workers[1].Mechanic::Mechanic("Ahmed", "16", 20);
 	workers[2].Mechanic::Mechanic("Mahmoud", "17", 18);*/
