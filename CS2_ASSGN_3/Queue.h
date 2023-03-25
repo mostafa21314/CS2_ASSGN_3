@@ -2,25 +2,25 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 template<class T>
-class Queue
+class Queue//circular queue
 {
 private:
-	int front;
-	int rear;
-	int count;
-	T* arr;
-	int size;
+	int front;//the index of the front element in the queue
+	int rear;//the index of the rear element in the queue
+	int count;//the number of elements  in the queue
+	T* arr;//the array of the queue
+	int size;//the size of the queue(will be used to decide the max size of the queue
 
 public:
-	Queue() ;
-	Queue(int);
-	~Queue();
-	bool isEmpty() const;
-	bool isFull() const;
-	void push(T);
-	T pop();
-	int GetCount() const;
-	int GetSize() const;
+	Queue() ;//default constructor that sets the size of the queue to 10
+	Queue(int);//initial value constructor that sets the size of the queue to the integer input
+	~Queue();//destructor for the queue
+	bool isEmpty() const;//function that checks if the queue is empty
+	bool isFull() const;//functiont that checks if a queue is full
+	void push(T);//function that pushes an element to the queue
+	T pop();//functions that returns the front of the queue and sets the front to front +1
+	int GetCount() const;//returns the current number of elements in the queue
+	int GetSize() const;//returns the size of the queue
 };
 #endif
 

@@ -3,7 +3,7 @@ Mechanic::Mechanic(string n, string i, int a)
 {
 	this->Person::Person(n,i,a);
 	this->SetCount(0);
-	this->apps = new Appointment[24];
+	this->apps = new Appointment[24];//the maximum number of appointments a mechanic can have is 24
 }
 Mechanic::Mechanic()
 {

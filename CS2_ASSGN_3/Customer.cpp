@@ -9,6 +9,11 @@ Customer::Customer()
 	this->app.hours = -1;
 	this->app.min = -1;
 }
+Customer::Customer(string str, Appointment moment)
+{
+	Customer(str, "", 0, "", moment);
+
+}
 Customer::Customer(string nam,string id, int ag, string mid, Appointment temp)
 {
 	this->Person::Person(nam,id,ag);

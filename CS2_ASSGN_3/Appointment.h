@@ -7,14 +7,14 @@
 #include<string>
 using namespace std;
 struct Appointment {
-	int min;
-	int hours;
-	Appointment(int x, int y)
+	int min;// stores the minutes
+	int hours;//stores the hours
+	Appointment(int x, int y)//easier way to initialize an appointment than to individually assign the hours and minitues
 	{
 		hours = x;
 		min = y;
 	}
-	Appointment()
+	Appointment()//default constructor for an appointment without known time
 	{
 		hours = -1;
 		min = -1;
